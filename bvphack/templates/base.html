@@ -29,19 +29,21 @@
     					<ul class="nav navbar-nav navbar-right">
     						{% if user.is_authenticated %}
                     <li><a href="{% url 'logout' %}"><button type="button" class="btn btn-primary">LogOut</button></a></li>
+
     						{% else %}
                       <li><a href="{% url 'login' %}"><button type="button" class="btn btn-primary">Login</button></a></li>
                       <li><p></p></li>
 
-                      <li><a href="{% url 'signupc' %}"><button type="button" class="btn btn-primary">Sign Up C</button></a></li>
+                      <li><a href="{% url 'signup' %}"><button type="button" class="btn btn-primary">Sign Up</button></a></li>
                       <li><p></p></li>
 
-                      <li><a href="{% url 'signupg' %}"><button type="button" class="btn btn-primary">Sign Up G</button></a></li>
     						{% endif %}
     					</ul>
     			</div>
     		</nav>
+
         {% block fullscreen %}
+      
         {% endblock %}
         <div class="container mycontent">
           {% block content %}

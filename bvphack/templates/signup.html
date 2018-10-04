@@ -1,15 +1,16 @@
 {% extends "base.html" %}
+
 {% load staticfiles %}
 {% load bootstrap3 %}
 
 {% block headblock %}
 
- <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+ <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}"> -->
 {% endblock %}
 
 {% block content %}
-<div class="container jumbotron">
-    <h1>SIGNupc UP!</h1>
+<div class="container">
+    <h1>SIGN UP!</h1>
     <form method="POST" class="form">
         {% csrf_token %}
         {% bootstrap_form form %}
