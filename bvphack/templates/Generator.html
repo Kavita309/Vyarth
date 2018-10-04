@@ -9,12 +9,11 @@
 
 {% block content %}
 <div class="container jumbotron">
-    <h1>SIGN UP!</h1>
+    <h1>Submit below form!</h1>
     <form method="POST" class="form">
-      
         {% csrf_token %}
         {% bootstrap_form form %}
-        <input type="submit" value="Sign Up" class="btn btn-default">
+        <input type="submit" value="Submit" class="btn btn-default">
     </form>
 </div>
 {% endblock %}

@@ -24,5 +24,6 @@ urlpatterns = [
     url(r"^$", views.HomePage.as_view(), name="home"),
     url(r"^login/$", auth_views.LoginView.as_view(template_name="login.html"),name='login'),
     url(r"^logout/$", auth_views.LogoutView.as_view(), name="logout"),
-    url(r"^signup/$", views.SignUpC.as_view(), name="signupc"),
+    url(r"^signupc/$", views.SignUpC.as_view(), name="signupc"),
+    url(r"^signupg/$", views.SignUpG.as_view(), name="signupg"),
 ]

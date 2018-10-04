@@ -1,13 +1,25 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
+from django.forms import ModelForm
 from django import forms
+from bvpapp.models import Generator, Collector, SubmitWaste
 
-class UserCreateForm(UserCreationForm):
+
+class GeneratorForm(forms.ModelForm):
     class Meta:
-        fields = ("username", "email", "password1", "password2")
-        model = get_user_model()
+        model = Generator
+        fields = ['name','communityName','address','contact','email']
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields["username"].label = "Display name"
-        self.fields["email"].label = "Email address"
+
+
+
+
+class CollectorForm(forms.ModelForm):
+    class Meta:
+        model = Collector
+        fields = ['name','email','address','contact']
+
+class SubmitWasteForm(forms.ModelForm):
+    class Meta:
+        model= SubmitWaste
+        fields = ['typeofwaste','quantityofwaste']

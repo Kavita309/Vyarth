@@ -11,12 +11,17 @@ class HomePage(TemplateView):
     template_name = "index.html"
 
 
-# class SignUpG(CreateView):
-#     form_class = forms.UserCreateForm
-#     success_url = reverse_lazy("login")
-#     template_name = "signup.html"
+class SignUpG(CreateView):
+    form_class = forms.GeneratorForm
+    success_url = reverse_lazy("login")
+    template_name = "signupG.html"
 
 class SignUpC(CreateView):
-    form_class = forms.UserCreateForm
+    form_class = forms.CollectorForm
     success_url = reverse_lazy("login")
     template_name = "SignupC.html"
+
+class Submitkarowaste(CreateView):
+    form_class=forms.SubmitWasteForm
+    #success_url=
+    template_name="Generator.html"
