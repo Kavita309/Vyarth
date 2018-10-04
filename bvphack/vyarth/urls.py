@@ -25,4 +25,7 @@ urlpatterns = [
     url(r"^signup/$", views.SignUp.as_view(), name="signup"),
     url(r"^gview/$", views.GenView.as_view(), name="gview"),
     url(r"^cview/$", views.ColView.as_view(), name="cview"),
+    url(r'^result/$',views.Result.as_view(),name='result'),
+    url(r"^new_view/$", views.new_view, name="new_view"),
+
 ]
