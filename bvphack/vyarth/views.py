@@ -8,6 +8,7 @@ from myapp.models import SubmitWaste,CollectWaste
 from . import forms
 from geopy.geocoders import Nominatim
 from geopy import distance
+from operator import itemgetter
 
 class HomePage(TemplateView):
     template_name = "index.html"
@@ -53,22 +54,29 @@ def new_view(request):
             tup1=(lat,lon)
             print(lat,lon,"hello")
             print(a)
-            val=1
             v=SubmitWaste.objects.filter(typeofwaste=a).values_list()
             print(v)
             list1=[]
-
+            rt=[]
             for i in v:
+                temp=[]
+                temp.append(i[4])
+                temp.append(i[5])
                 print(i[4])
-                list1.append(geolocator.geocode(i[4]))
+                list1.append(geolocator.geocode(i[4],timeout=10))
+                rt.append(temp)
             dist=[]
             for ele in list1:
                 tup2=(ele.latitude,ele.longitude)
                 dist.append(distance.distance(tup1, tup2).km)
-            dist.sort()
             print(dist)
+            j=0
+            for m in dist:
+                rt[j].append(m)
+                j=j+1
 
+            rt=sorted(rt, key=itemgetter(2))
+            print(rt)
 
-
-        return render(request,'result.html',{'val':val})
+        return render(request,'result.html',{'val':rt})
     return render(request,'SignupC.html',{'form':form})
