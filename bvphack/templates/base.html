@@ -20,7 +20,7 @@
 
   </head>
   <body style="padding-top:10px;">
-    <nav class="navbar mynav" role="navigation" id="navbar">
+    <nav class="navbar navbar-inverse">
     			<div class="container">
             <a class="navbar-brand btn btn-default" href="{% url 'home' %}">
               <span class='glyphicon glyphicon-home'>
@@ -28,12 +28,12 @@
             </a>
     					<ul class="nav navbar-nav navbar-right">
     						{% if user.is_authenticated %}
-                    <li><a href="{% url 'logout' %}"><button type="button" class="btn btn-primary">LogOut</button></a></li>
+                    <li><a href="{% url 'logout' %}"><button type="button" class="btn btn-primary mybutton">LogOut</button></a></li>
                 {% else %}
-                      <li><a href="{% url 'login' %}"><button type="button" class="btn btn-primary">Login</button></a></li>
+                      <li><a href="{% url 'login' %}"><button type="button" class="btn btn-primary mybutton">Login</button></a></li>
                       <li><p></p></li>
 
-                      <li><a href="{% url 'signup' %}"><button type="button" class="btn btn-primary">Sign Up</button></a></li>
+                      <li><a href="{% url 'signup' %}"><button type="button" class="btn btn-primary mybutton">Sign Up</button></a></li>
                       <li><p></p></li>
 
     						{% endif %}

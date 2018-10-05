@@ -9,6 +9,7 @@ from . import forms
 from geopy.geocoders import Nominatim
 from geopy import distance
 from operator import itemgetter
+from tabulate import tabulate
 
 class HomePage(TemplateView):
     template_name = "index.html"

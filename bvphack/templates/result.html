@@ -1,2 +1,31 @@
-<h2>The list of the preferred clusters, along with their quantitities is as follows: </h2>
-{{val}}
+{% extends "base.html" %}
+{% block headblock %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<br> <br> <h2>The list of the preferred clusters, along with their quantitities is as follows: </h2>
+
+<div class="jumbotron">
+  {% if val %}
+     <h3>There are {{ val|length }} records:</h3>
+     <br>
+     <td><h3> <b>Location  Amount  Distance </b></h3></td>
+     <br>
+     {% for  e in val  %}
+     {% for x in e %}
+
+       <td> {{ x }} </td>
+     {% endfor %}
+     <br>
+     <br>
+     {% endfor %}
+  {% else %}
+     There are no records in the system
+  {% endif %}
+
+</div>
+
+{% endblock %}
