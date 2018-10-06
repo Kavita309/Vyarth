@@ -29,7 +29,7 @@ The users will also be provided an extra incentive, apart from the easy collecti
 ## Technologies To be  Used:
 * Django Framework
 * Python
-* Paytm API
+* GoogleMaps API
 * DialogFlow
 
 
