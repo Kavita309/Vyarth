@@ -1,3 +1,16 @@
+# VYARTH
+*...from BEKAAR to SWEEKAR*
+
+## Theme
+Waste Management
+In a densely populated country like India, waste management is an issue which stands unresolved.
+Using technology, we aim to solve the same and “BUILD FOR INDIA”.
+
+## Inspiration
+1) To improve upon and optimize the garbage collection & disposal methods carried upon in our country.
+2) To reduce the amount of wastes piled up in the dump yards by efficiently utilizing the wastes.
+3) To involve the company and a third party to carry out this whole ideation, henceforth increasing employment and user incentives.
+
 ## Overview
 A website to make the users collaboratively manage waste in different communities such as household, offices, markets etc.
 Such communities can connect with those industries which can turn waste into raw/usable materials, thus converting waste material into 
@@ -25,13 +38,7 @@ The company involved in our project, for instance a company requiring the waste 
 through our proposed model at a reduced price.
 The delivery system will be managed by our portel only.
 The users will also be provided an extra incentive, apart from the easy collection of garbage in the form of paytm cash.
-
-## Technologies To be  Used:
-* Django Framework
-* Python
-* GoogleMaps API
-* DialogFlow
-
+A Chatbot using Dialogflow has been provided to solve all doubts/queries regarding Waste Management, Recycling Techniques (DIY), Waste Segregation and so on. 
 
 ## Basic Implementation:
 * Login Portal - There will be 2 types of login - 
@@ -44,7 +51,54 @@ recycled paper requires waste paper and a lot of waste paper is generated in off
 They can select/’accept’/sweekar what type of waste do they need and that waste will be delivered to their doorstep by the physical 
 agents/drivers. 
 
-## Future Scopes:
+## working
+Our website involves a total of 3 steps:
+1. Collection of waste from the user. The waste collected is divided in 5 Categories : Paper, Plastic, Organic, Glass, Metal. The users can submit waste that 
+2. The delivery of the waste from the user to the company where the latter can order the waste materials they want to use/process, right to their doorstep.
+3. Utilisation of Waste : The company now, uses the waste by amicably collecting it, profusely processing it and efficiently recycling it.
+(For example: A packaging company may require old newspaper/books, an animal farm may require organic wastes and so on.)
+
+## Future Scope:
 The future aspect can be extended to collection of wastes from community dustbins where the waste can be segregated at the instant it 
 is dumped using Open Cv.
 Further, the incentives can be improved upon.
+
+## Installation Requirements
+
+```
+Framework : Django, Version : 1.11.8
+Language : Python, Version : 3.6.3
+Other: GoogleMaps, DialogFlow
+
+To run it, you need to install some packages and libraries as follows:
+Bootstrap 3
+django[argon]
+geopy
+tabulate
+
+To install these, write this on the command line terminal:
+"pip install package-name"
+```
+
+## To run
+
+```
+Clone this repo
+cd into this repo
+Enter the command: "python manage.py runserver"
+Copy the url and paste it in your favourite browser window.
+```
+
+## See for youself:
+
+![screenshot 212](https://user-images.githubusercontent.com/31369977/46570100-96ec5b00-c97c-11e8-8a6b-0054f634dde8.png)
+![screenshot 213](https://user-images.githubusercontent.com/31369977/46570099-96ec5b00-c97c-11e8-9b4c-dcb7ae4ea141.png)
+![screenshot 214](https://user-images.githubusercontent.com/31369977/46570098-96ec5b00-c97c-11e8-9455-922e9bf736fa.png)
+![screenshot 215](https://user-images.githubusercontent.com/31369977/46570097-96ec5b00-c97c-11e8-95e8-8c07cc09c6dc.png)
+![screenshot 216](https://user-images.githubusercontent.com/31369977/46570096-9653c480-c97c-11e8-8aed-8c30abcea6c4.png)
+![screenshot 217](https://user-images.githubusercontent.com/31369977/46570095-9653c480-c97c-11e8-9ebc-f59921ed0835.png)
+![screenshot 218](https://user-images.githubusercontent.com/31369977/46570094-9653c480-c97c-11e8-9493-4485225321ff.png)
+![screenshot 219](https://user-images.githubusercontent.com/31369977/46570093-95bb2e00-c97c-11e8-9c45-7aae938296af.png)
+
+
+This project was made collectively by [Mansi Breja](https://github.com/MansiBreja), [Kavita Maurya](https://github.com/Kavita309),  [Anshima Chaudhary](https://github.com/anshima1) and [Swapan Asija](https://github.com/Swapanasija) as a part of the WIEHack Hackathon, BVP, Delhi.
