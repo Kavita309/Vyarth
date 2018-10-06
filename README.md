@@ -30,6 +30,7 @@ The users will also be provided an extra incentive, apart from the easy collecti
 * Django Framework
 * Python
 * Paytm API
+* DialogFlow
 
 
 ## Basic Implementation:
